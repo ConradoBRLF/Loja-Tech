@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: radial-gradient(#0f0f0f, #000000);
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+header.topo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-topo {
+  height: 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+button {
+  background: #00ffcc;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.produtos {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.produto {
+  background: #111;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 0 10px #00ffcc55;
+}
+
+.produto img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+/* Botão flutuante */
+.carrinho-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00c853;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.carrinho-flutuante img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Mini janela do carrinho */
+.carrinho-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #1e1e1e;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff80;
+  display: none;
+  z-index: 999;
+}
+
+.carrinho-popup h3 {
+  margin-top: 0;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.item-carrinho button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carrinho-popup button {
+  margin-top: 10px;
+  background: #00c853;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+.item-carrinho {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+  align-items: center;
+}
+
+.item-carrinho img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-carrinho .info {
+  flex: 1;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantidade button {
+  background: #00c853;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
