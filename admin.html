@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Administrativo - Loja Tech</title>
+  <link rel="stylesheet" href="admin.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPYa-WUstGLlbn5hBJOXwuNMgaXL4UKsM",
+      authDomain: "site-loja-tech-b6dd8.firebaseapp.com",
+      databaseURL: "https://site-loja-tech-b6dd8-default-rtdb.firebaseio.com",
+      projectId: "site-loja-tech-b6dd8",
+      storageBucket: "site-loja-tech-b6dd8.appspot.com",
+      messagingSenderId: "82807822113",
+      appId: "1:82807822113:web:d271f5ec0b230eaad15060"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+</head>
+<body>
+  <h1>Painel do Administrador</h1>
+
+  <!-- Login simples -->
+  <div id="login">
+    <input type="password" id="senha" placeholder="Digite a senha" />
+    <button onclick="verificarSenha()">Entrar</button>
+  </div>
+
+  <!-- Conteúdo protegido -->
+  <div id="painel" style="display:none;">
+    <h2>Cadastrar Produto</h2>
+    <input type="text" id="nome" placeholder="Nome do produto" />
+    <input type="number" id="preco" placeholder="Preço" />
+    <input type="text" id="imagem" placeholder="URL da imagem" />
+    <input type="file" id="seletorImagem" accept="image/*" />
+    <button id="btn-salvar" onclick="adicionarProduto()">Salvar</button>
+
+    <h2>Produtos Cadastrados</h2>
+
+    <!-- Campo de busca -->
+    <input type="text" id="busca" placeholder="Buscar produto..." oninput="filtrarProdutos()" />
+
+    <!-- Contador de produtos -->
+    <p id="contador-produtos">Total de produtos: 0</p>
+
+    <!-- Lista de produtos -->
+    <div id="lista-produtos"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
